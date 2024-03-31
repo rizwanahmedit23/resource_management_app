@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class JobOpeningService {
-  private apiUrl = 'https://recruitment-management-backend-production.up.railway.app';
+  private apiUrl = 'https://recruitment-management-backend-production.up.railway.app/api/resourceReq';
 
   constructor(private http: HttpClient) {}
 
