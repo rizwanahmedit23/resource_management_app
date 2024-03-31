@@ -18,7 +18,7 @@ export class AuthService {
     return this.currentUser;
   }
   
-  private baseUrl = 'https://recruitment-management-backend-production.up.railway.app'; // Replace with your actual backend API URL
+  private baseUrl = 'https://recruitment-management-backend-production.up.railway.app/api/auth'; // Replace with your actual backend API URL
 
   constructor(private http: HttpClient) {}
 
