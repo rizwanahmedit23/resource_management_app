@@ -10,7 +10,7 @@ export class CandidateService {
   addCandidateByResourceRequirementID(candidateData: any, jobId: string | null) {
     throw new Error('Method not implemented.');
   }
-  private apiUrl = 'https://recruitment-management-backend-production.up.railway.app'; // Replace with your API URL
+  private apiUrl = 'https://recruitment-management-backend-production.up.railway.app/api/candidates'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 

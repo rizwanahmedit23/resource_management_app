@@ -28,9 +28,6 @@ const routes: Routes = [
   {path:'job-detail/:id', component:JobOpeningDetailComponent},
   {path:'view-candidate/:id', component:ViewCandidateComponent},
 
-  
-
-
   { path: 'register', component: RegistrationComponent },
   { path: 'hr-discussion', component: HRDiscussionComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.HR_MANAGER } },
   { path: 'resource-requirements', component: ResourceRequirementsComponent },
@@ -38,7 +35,7 @@ const routes: Routes = [
   { path: 'level1-feedback', component: Level1FeedbackComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.LEVEL1_PANEL } },
   { path: 'level2-feedback', component: Level2FeedbackComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.LEVEL2_PANEL } },
   { path: '', redirectTo: '/login', pathMatch: 'full' }, 
-  { path: '**', redirectTo: '/login' } ,
+  { path: '**', redirectTo: '/login' },
   
 ];
 
