@@ -1,0 +1,69 @@
+<!-- level2-feedback.component.html -->
+<div *ngIf="!isHomePage() && authService.getCurrentUser()?.role === userRoles.LEVEL2_PANEL">
+    <h2>Level 2 Interview Feedback</h2>
+    <!-- Display a form to add/edit a new feedback -->
+    <form (ngSubmit)="addLevel2Feedback()">
+      <label for="projectExperience">Project Experience:</label>
+      <input type="text" id="projectExperience" name="projectExperience" [(ngModel)]="projectExperience" required>
+  
+      <label for="advTechSkills">Advanced Technical Skills:</label>
+      <input type="text" id="advTechSkills" name="advTechSkills" [(ngModel)]="advTechSkills" required>
+  
+      <label for="recommendation">Recommendation:</label>
+      <input type="text" id="recommendation" name="recommendation" [(ngModel)]="recommendation" required>
+  
+      <button class="btn btn-outline-success"  type="submit">{{ selectedFeedbackIndex !== null ? 'Edit Feedback' : 'Add Feedback' }}</button>
+
+    </form>
+    </div>
+  
+    <!-- Display the list of feedback with edit and delete buttons -->
+    <!-- <ul>
+      <li *ngFor="let feedback of level2Feedback; let i = index">
+        {{ feedback.projectExperience }} - {{ feedback.advTechSkills }} - {{ feedback.recommendation }}
+        <div *ngIf="!isHomePage()">
+          <button (click)="editLevel2Feedback(i)">Edit</button>
+          <button (click)="deleteLevel2Feedback(i)">Delete</button>
+        </div>
+      </li>
+    </ul> -->
+
+  
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Level 2 Feedback Details</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <a *ngif="authService.getCurrentUser()?.role === userRoles.LEVEL2_PANEL"><button class="btn btn-outline-success" routerLink="/level2-feedback" >Modify</button></a>
+            </div> -->
+          </div>
+      </nav>
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Project Experience:</th>
+          <th scope="col">Advanced Technical Skills:</th>
+          <th scope="col">Recommendation:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feedback of level2Feedback; let i = index">
+          <th>{{feedback.projectExperience}}</th>
+          <th>{{feedback.advTechSkills}}</th>
+          <th>{{feedback.recommendation}}</th>
+          <div *ngIf="!isHomePage()">
+            <td>
+              <button type="button" class="btn btn-outline-primary" (click)="editLevel2Feedback(i)">Edit</button>
+              <!-- <button type="button" class="btn btn-otline-danger" (click)="deleteLevel2Feedback(i)">Delete</button> -->
+            </td>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+ 
+  

@@ -1,0 +1,39 @@
+<!-- navbar.component.html -->
+<!-- navbar.component.html -->
+
+<nav class="navbar2 navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.RECRUITER" class="nav-item">
+          <a class="nav-link" routerLink="/resource-requirements">Resource Requirements</a>
+        </li>
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.RECRUITER" class="nav-item">
+          <a class="nav-link" routerLink="/candidate-details">Candidate Details</a>
+        </li>
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.LEVEL1_PANEL" class="nav-item">
+          <a class="nav-link" routerLink="/level1-feedback">Level 1 Interview Feedback</a>
+        </li>
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.LEVEL2_PANEL" class="nav-item">
+          <a class="nav-link" routerLink="/level2-feedback">Level 2 Interview Feedback</a>
+        </li>
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.HR_MANAGER" class="nav-item">
+          <a class="nav-link" routerLink="/hr-discussion">HR Discussion</a>
+        </li>
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.RECRUITER" class="nav-item">
+          <a class="nav-link" routerLink="/discussion-details">Discussion Details</a>
+        </li>
+        <li *ngIf="authService.getCurrentUser()?.role === userRoles.RECRUITER || 
+        authService.getCurrentUser()?.role === userRoles.HR_MANAGER ||
+        authService.getCurrentUser()?.role === userRoles.LEVEL1_PANEL ||
+        authService.getCurrentUser()?.role === userRoles.LEVEL2_PANEL" class="nav-item">
+            <!-- <a class="nav-link" routerLink="/home">Home</a> -->
+          </li>
+        </ul>
+    </div>
+  </nav>
+  

@@ -1,0 +1,30 @@
+<div class="viewTable">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Experience</th>
+        <th>Current Company</th>
+        <th>Designation</th>
+        <!-- <th>Resume</th>   -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates">
+        <!-- <p> Hello{{candidate.id}}</p>
+        <td>Hello</td> -->
+        <td>{{ candidate.id }}</td>
+        <td>{{ candidate.name }}</td>
+        <td>{{ candidate.email }}</td>
+        <td>{{ candidate.mobile }}</td>
+        <td>{{ candidate.experience }}</td>
+        <td>{{ candidate.company }}</td>
+        <td>{{ candidate.designation }}</td>
+        <!-- <td>{{ candidate.resume }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

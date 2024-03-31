@@ -1,0 +1,38 @@
+<app-sidebar></app-sidebar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button class="addbutton" (click)="addOpening()">Add opening</button>
+    </div>
+    
+    <div class="job-openings" style="margin-top: 71px">
+        <div *ngFor="let jobOpening of jobOpenings" class="job-opening">
+            <div [ngStyle]="{'background-color': jobOpening.status === 'Active' ? 'green' : 'red'}"  class="status">{{jobOpening.status}}</div>
+            <h2>{{ jobOpening.title }}</h2>
+            <p>{{ jobOpening.description }}</p>
+    
+            <h3>Experience</h3>
+            <ul>
+                <li >{{ jobOpening.experience }}</li>
+            </ul>
+    
+            <h3>Shift Timing</h3>
+            <ul>
+                <li>{{ jobOpening.shiftTiming }}</li>
+            </ul>
+    
+            <button class="button" (click)="viewDetails(jobOpening)">Details</button>
+            <button class="button" (click)="viewCandidates(jobOpening)" *ngIf="jobOpening.status !== 'Closed'">View Candidates</button>
+            <button class="button" (click)="addCandidates(jobOpening)" *ngIf="jobOpening.status !== 'Closed'">Add Candidates</button>
+        </div>
+    </div>
+    
+</body>
+</html>

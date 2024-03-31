@@ -1,0 +1,72 @@
+<!-- hr-discussion.component.html -->
+<div  *ngIf="!isHomePage()   &&  authService.getCurrentUser()?.role === userRoles.HR_MANAGER">
+  <h2>HR Discussion</h2>
+  <!-- Display a form to add/edit a new discussion -->
+  <form (ngSubmit)="addHRDiscussion()">
+    <label for="communicationSkills">Communication Skills:</label>
+    <input type="text" id="communicationSkills" name="communicationSkills" [(ngModel)]="communicationSkills" required>
+
+    <label for="culturalFit">Cultural Fit:</label>
+    <input type="text" id="culturalFit" name="culturalFit" [(ngModel)]="culturalFit" required>
+
+    <label for="finalDecision">Final Decision:</label>
+    <input type="text" id="finalDecision" name="finalDecision" [(ngModel)]="finalDecision" required>
+
+    <button class="btn btn-outline-success"  type="submit">{{ selectedDiscussionIndex !== null ? 'Edit Discussion' : 'Add Discussion' }}</button>
+
+  </form>
+  </div>
+  
+
+  <!-- Display the list of discussions with edit and delete buttons -->
+  <!-- <ul>
+    <li *ngFor="let discussion of hrDiscussions; let i = index">
+      {{ discussion.communicationSkills }} - {{ discussion.culturalFit }} - {{ discussion.finalDecision }}
+      <div *ngIf="!isHomePage()">
+        <button (click)="editHRDiscussion(i)">Edit</button>
+        <button (click)="deleteHRDiscussion(i)">Delete</button>
+      </div>
+      
+    </li>
+  </ul> -->
+
+
+  
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HR Discussion Details</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+            <a *ngif="authService.getCurrentUser()?.role === userRoles.HR_MANAGER"><button class="btn btn-outline-success" routerLink="/hr-discussion" >Modify</button></a>
+          </div> -->
+        </div>
+    </nav>
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Communication Skills:</th>
+        <th scope="col">Cultural Fit:</th>
+        <th scope="col">Final Decision:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let discussion of hrDiscussions; let i = index">
+        <th>{{discussion.communicationSkills}}</th>
+        <th>{{discussion.culturalFit}}</th>
+        <th>{{discussion.finalDecision}}</th>
+        <div *ngIf="!isHomePage()">
+          <td>
+            <button type="button" class="btn btn-outline-primary" (click)="editHRDiscussion(i)">Edit</button>
+            <!-- <button type="button" class="btn btn-otline-danger" (click)="deleteHRDiscussion(i)">Delete</button> -->
+          </td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+ 
+

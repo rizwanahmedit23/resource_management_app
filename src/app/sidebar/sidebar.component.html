@@ -1,0 +1,17 @@
+<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+    ☰
+</div>
+
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+  <div
+      class="sidebar-close"
+      (click)="sidebarShow = !sidebarShow"
+  >
+      X
+  </div>
+    <div class="sidebar-content">
+      <div>Home Page</div>
+      <div>About Us</div>
+      <div>Services</div>
+    </div>
+</div>

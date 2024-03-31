@@ -1,0 +1,44 @@
+
+body {
+  display: block;
+  background-image: url(src\assets\addCandidate.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+}
+form {
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  top: 38px;
+  left: 14%;
+  width: 40%;
+ 
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius:10px;
+    border: none;
+    background: #dcdcdc;
+  }
+  
+  button {
+    background-color: #264669;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  

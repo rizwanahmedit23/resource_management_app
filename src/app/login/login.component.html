@@ -1,0 +1,20 @@
+<div class="login-container">
+  <div class="login-content">
+    <form class="login-form" (submit)="login()">
+      <h2 class="login-heading">Login</h2>
+      <!-- <label for="username">Username:</label> -->
+      <input class="login-input" value="Username" placeholder="Username" type="text" id="username" name="username" [(ngModel)]="username" required>
+   
+      <!-- <label for="password">Password:</label> -->
+      <input class="login-input" value="Password" placeholder="Password" type="password" id="password" name="password" [(ngModel)]="password" required>
+   
+      <button type="submit" class="btn-content-container__2HVS login-button">Login</button>
+      
+      <!-- Additional links inside the form -->
+      <div class="additional-links">
+        <p class="forgot-password">Forgot password? <a class="forgot-password-link" routerLink="/forgot-password">Reset here</a></p>
+        <p class="signup">Don't have an Account? <a class="signup-link" href='/register'>Signup</a></p>
+      </div>
+    </form>
+  </div>
+</div>

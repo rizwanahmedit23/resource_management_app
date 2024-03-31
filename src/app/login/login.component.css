@@ -1,0 +1,98 @@
+/* Reset default margin and padding */
+body, h2, p, form, label, input, button {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a global style to ensure consistent styling */
+body {
+  font-family: 'apple-system', sans-serif;
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+/* Center the login form vertically and horizontally */
+.login-container {
+  font-family: 'apple-system', sans-serif;
+  background-color: #f8f9fa;
+  color:#3a4b54;
+  height: 100vh;
+}
+
+.login-heading{
+  text-align: center;
+}
+/* Enclose the form and additional links within the same boundary */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px; /* Increased margin between form and additional links */
+}
+
+/* Style the login form */
+.login-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px; /* Increased padding for a more spacious feel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Increased width for better readability */
+}
+
+.login-heading {
+  font-size: 1.8em; /* Slightly increased font size */
+  margin-bottom: 24px; /* Increased margin between heading and form */
+  color: #343a40; /* Darkened text color for better contrast */
+}
+
+label {
+  display: block;
+  margin-bottom: 12px; /* Increased margin between labels */
+  color: #495057; /* Slightly darker text color */
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px; 
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px; 
+  background-color:#495f69;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.login-button:hover {
+  background-color: #536c78
+}
+
+/* Style the additional links */
+.additional-links {
+  text-align: center;
+}
+
+.forgot-password, .signup {
+  margin-top: 16px;
+  font-size: 0.9em;
+  color: #6c757d; 
+}
+
+.forgot-password-link, .signup-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease; 
+}
+
+.forgot-password-link:hover, .signup-link:hover {
+  text-decoration: underline;
+}

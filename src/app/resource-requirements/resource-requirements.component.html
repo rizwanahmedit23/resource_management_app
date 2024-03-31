@@ -1,0 +1,70 @@
+<!-- resource-requirements.component.html -->
+<div *ngIf="!isHomePage() && authService.getCurrentUser()?.role === userRoles.RECRUITER" > 
+  <h2>Resource Requirements</h2>
+  <!-- Display a form to add/edit a new resource requirement -->
+  <form (ngSubmit)="addRequirement()">
+    <label for="jobTitle">Job Title:</label>
+    <input type="text" id="jobTitle" name="jobTitle" [(ngModel)]="jobTitle" required>
+
+    <label for="requiredSkills">Required Skills:</label>
+    <input type="text" id="requiredSkills" name="requiredSkills" [(ngModel)]="requiredSkills" required>
+
+    <label for="minExperience">Minimum Experience:</label>
+    <input type="text" id="minExperience" name="minExperience" [(ngModel)]="minExperience" required>
+
+    <button type="submit">{{ selectedRequirementIndex !== null ? 'Edit Requirement' : 'Add Requirement' }}</button>
+    <button class="btn btn-outline-success"  type="submit">{{ selectedRequirementIndex !== null ? 'Edit Requirement' : 'Add Requirement' }}</button>
+
+  </form>
+</div>
+  <!-- Display the list of resource requirements with edit and delete buttons -->
+  <!-- <ul> -->
+    <!-- <li *ngFor="let requirement of requirements; let i = index">
+      {{ requirement.jobTitle }} - {{ requirement.requiredSkills }} - {{ requirement.minExperience }}
+      <div *ngIf="!isHomePage()">
+        <button (click)="editRequirement(i)">Edit</button>
+        <button (click)="deleteRequirement(i)">Delete</button>
+      </div>
+      
+    </li>
+  </ul> -->
+
+
+
+
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Resource Requirement</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+        <a *ngif="authService.getCurrentUser()?.role === userRoles.RECRUITER"><button class="btn btn-outline-success" routerLink="/resource-requirements" >Modify</button></a>
+      </div> -->
+    </div>
+</nav>
+
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th scope="col">Job Title:</th>
+    <th scope="col">Required Skills:</th>
+    <th scope="col">Strengths:</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let requirement of requirements; let i = index">
+    <th>{{requirement.jobTitle}}</th>
+    <th>{{requirement.requiredSkills}}</th>
+    <th>{{requirement.minExperience}}</th>
+    <div *ngIf="!isHomePage()">
+      <td>
+        <button type="button" class="btn btn-outline-primary" (click)="editRequirement(i)">Edit</button>
+        <button type="button" class="btn btn-otline-danger" (click)="deleteRequirement(i)">Delete</button>
+      </td>
+    </div>
+  </tr>
+</tbody>
+</table>

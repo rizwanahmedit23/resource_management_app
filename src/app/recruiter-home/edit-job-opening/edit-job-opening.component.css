@@ -1,0 +1,66 @@
+/* src/app/job-opening-form/job-opening-form.component.css */
+
+body {
+    display: block;
+    background-image: url(src\assets\addJoining.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .addjob {
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px;
+    margin-top: 56px;
+  
+  }
+  
+  form {
+    padding: 30px;
+    /* box-shadow: 20px 2px 60px #00000041, inset -20px -20px 60px #ffffff40; */
+    border-radius: 10px;
+  
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: medium;
+    font-weight: 500;
+    color: white;
+  }
+  
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+  }
+  
+  button[type="button"] {
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #349049;
+  }

@@ -1,0 +1,52 @@
+body{
+    background-image: linear-gradient(
+  #ffffff, #393d6c00
+);
+    
+}
+.job-opening {
+    max-width: 800px;
+    margin: 20px auto;
+    /* background-color: #fff; */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
+
+  }
+
+  .job-opening h2 {
+    color: #333;
+  }
+
+  .job-opening p {
+    color: #666;
+  }
+
+
+  .button{
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #030357;
+    color: white;
+    padding: 5px 11px;
+  }
+  .status{
+    display: inline-block;
+    position: absolute;
+    right: 30%;
+    background-color: green;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 4px;
+  }
+
+  .edit{
+    position: relative;
+    left: 91%;
+    background-color: #030357;
+    border: none;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 5px;
+  }

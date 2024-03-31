@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form [formGroup]="candidateForm" (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+
+    <label for="mobile">Mobile:</label>
+    <input type="tel" id="email" formControlName="mobile" required>
+
+    <label for="company">Current company:</label>
+    <input type="text" id="company" formControlName="company" required>
+
+    <label for="designation">Designation:</label>
+    <input type="text" id="designation" formControlName="designation" required>
+  
+    <!-- <label for="resume">Resume:</label>
+    <input type="file" id="resume" formControlName="resume" required> -->
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+</body>
+</html>
+
+  

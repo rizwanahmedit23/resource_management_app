@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="job-openings" style="margin-top: 71px">
+        <div class="job-opening">
+          <h1 class="text-center">Job Detail</h1>
+          <div [ngStyle]="{'background-color': jobOpening?.status === 'Active' ? 'green' : 'red'}" class="status">{{jobOpening?.status}}</div>
+          <button class="edit" (click)="edit()">Edit</button>
+          <h2>{{ jobOpening?.title }}</h2>
+          <p>{{ jobOpening?.description }}</p>
+          
+          <h3>Requirements</h3>
+          <ul>
+            <li >{{ jobOpening?.requirements }}</li>
+          </ul>
+      
+          <h3>Responsibilities</h3>
+          <ul>
+            <li >{{ jobOpening?.responsibilities }}</li>
+          </ul>
+      
+          <h3>Experience</h3>
+          <ul>
+            <li>{{ jobOpening?.experience }}</li>
+          </ul>
+      
+          <h3>Shift Timing</h3>
+          <ul>
+            <li>{{ jobOpening?.shiftTiming }}</li>
+          </ul>
+      
+          <button class="button" (click)="viewCandidates()" *ngIf="jobOpening?.status !== 'Closed'">View Candidates</button>
+          <button class="button" (click)="addCandidates()" *ngIf="jobOpening?.status !== 'Closed'">Add Candidates</button>
+        </div>
+      </div>
+      
+    
+</body>
+</html>

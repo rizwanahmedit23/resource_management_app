@@ -1,0 +1,51 @@
+
+ 
+  .job-opening {
+    
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid black;
+    border-radius: 10px;
+  }
+
+  .job-opening h2 {
+    color: #333;
+  }
+
+  .job-opening p {
+    color: #666;
+  }
+
+  
+  .addbutton{
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    background-color: #475d75;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button{
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #030357;
+    color: white;
+    padding: 5px 11px;
+  }
+  .status{
+    display: inline-block;
+    position: absolute;
+    right: 30%;
+    background-color: green;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 4px;
+  }

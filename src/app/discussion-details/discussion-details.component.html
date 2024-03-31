@@ -1,0 +1,58 @@
+<div *ngIf="!isHomePage() && authService.getCurrentUser()?.role === userRoles.RECRUITER">
+    <h2>Discussion Details</h2>
+    <!-- Display a form to add a new discussion -->
+    <form (ngSubmit)="addDiscussionDetails()">
+      <label for="discussionDate">Discussion Date:</label>
+      <input type="date" id="discussionDate" name="discussionDate" [(ngModel)]="discussionDate" required>
+  
+      <label for="discussionNotes">Discussion Notes:</label>
+      <textarea id="discussionNotes" name="discussionNotes" [(ngModel)]="discussionNotes" required></textarea>
+  
+      <button class="btn btn-outline-success"  type="submit">Add Discussion</button>
+    </form>
+  </div>
+    <!-- Display the list of discussion details -->
+    <!-- <ul>
+      <li *ngFor="let discussion of discussionDetails">
+          <p>Date: {{ discussion.discussionDate | date }}</p>
+          <p>Notes: {{ discussion.discussionNotes }}</p>       
+      </li>
+    </ul> -->
+
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Discussion Details</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <a *ngif="authService.getCurrentUser()?.role === userRoles.RECRUITER"><button class="btn btn-outline-success" routerLink="/discussion-details" >Modify Candidate</button></a>
+            </div> -->
+          </div>
+      </nav>
+    
+    <table class="table table-hover">
+      <thead>
+        <tr> 
+          <th scope="col">Discussion Date</th>
+          <th scope="col">Discussino Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let discussion of discussionDetails">
+          <th>{{discussion.discussionDate}}</th>
+          <th>{{discussion.discussionNotes}}</th>
+          <div *ngIf="!isHomePage()">
+            <td>
+              <button type="button" class="btn btn-outline-primary" >Edit</button>
+              <!-- <button type="button" class="btn btn-otline-danger" (click)="deleteCandidate(i)">Delete</button> -->
+            </td>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+
+   
