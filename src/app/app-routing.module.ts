@@ -34,8 +34,8 @@ const routes: Routes = [
   { path: 'discussion-details', component: DiscussionDetailsComponent },
   { path: 'level1-feedback', component: Level1FeedbackComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.LEVEL1_PANEL } },
   { path: 'level2-feedback', component: Level2FeedbackComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.LEVEL2_PANEL } },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
-  { path: '**', redirectTo: '/login' },
+  { path: '', redirectTo: '/recruiter-home', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/recruiter-home' },
   
 ];
 
