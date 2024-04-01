@@ -15,6 +15,7 @@ import { AddJobOpeningComponent } from './recruiter-home/add-job-opening/add-job
 import { CandidateFormComponent } from './recruiter-home/candidate-form/candidate-form.component';
 import { JobOpeningDetailComponent } from './recruiter-home/job-opening-detail/job-opening-detail.component';
 import { ViewCandidateComponent } from './recruiter-home/view-candidate/view-candidate.component';
+import { EditJobOpeningComponent } from './recruiter-home/edit-job-opening/edit-job-opening.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'recruiter-home', component: RecruiterHomeComponent},
   { path: 'add-job-opening', component: AddJobOpeningComponent },
   { path: 'add-job-opening/:id', component: AddJobOpeningComponent },
+  { path: 'edit-job-opening/:id', component: EditJobOpeningComponent},
   {path:'candidate-form/:id', component:CandidateFormComponent},
   {path:'job-detail/:id', component:JobOpeningDetailComponent},
   {path:'view-candidate/:id', component:ViewCandidateComponent},

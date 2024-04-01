@@ -44,6 +44,6 @@ export class JobOpeningDetailComponent implements OnInit {
   }
 
   edit(): void {
-    this.route.navigate(['/add-job-opening', this.jobOpening.requirementId]);
+    this.route.navigate(['/edit-job-opening', this.jobOpening.requirementId]);
   }
 }
