@@ -14,8 +14,8 @@ export class AppComponent implements OnInit {
   constructor(private roleService: RoleService) {}
 
   ngOnInit(): void {
-    this.roleService.getUserRole().subscribe((role) => {
-      this.userRole = role;
-    });
+    // this.roleService.getUserRole().subscribe((role) => {
+    //   this.userRole = role;
+    // });
   }
 }

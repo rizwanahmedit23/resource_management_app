@@ -10,12 +10,13 @@ export class CandidateService {
   addCandidateByResourceRequirementID(candidateData: any, jobId: string | null) {
     throw new Error('Method not implemented.');
   }
-  private apiUrl = 'https://recruitment-management-backend-production.up.railway.app/api/candidates'; // Replace with your API URL
+  //https://recruitment-management-backend-production.up.railway.app/api/candidates
+  private apiUrl = 'http://localhost:8080/api/candidates'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 
-  addCandidate(candidate: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/addCandidate`, candidate);
+  addCandidate(candidate: any, jobId: number): Observable<any> {
+    return this.http.post(`${this.apiUrl}/addCandidate/${jobId}`, candidate);
   }
   
 
@@ -23,7 +24,7 @@ export class CandidateService {
 //     return this.http.post(`${this.apiUrl}/addCandidatesByResourceRequirementID/${jobID}`, candidateData);
 //   }
 
-  getCandidates(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/getCandidates`);
+getAllCandidatesByJobId(jobId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/getAllCandidatesByJobId/${jobId}`);
   }
 }

@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class RoleService {
-  private readonly baseUrl = 'http://localhost:8080'; // Replace with your backend URL
+  // private readonly baseUrl = 'http://localhost:8080'; // Replace with your backend URL
 
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-  getUserRole(): Observable<string> {
-    return this.http.get<string>(`${this.baseUrl}/api/auth/user-role`);
-  }
+  // getUserRole(): Observable<string> {
+  //   return this.http.get<string>(`${this.baseUrl}/api/auth/user-role`);
+  // }
 }

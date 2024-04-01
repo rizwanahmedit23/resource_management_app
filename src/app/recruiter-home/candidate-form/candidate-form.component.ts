@@ -44,7 +44,7 @@ export class CandidateFormComponent implements OnInit {
       const candidateData = this.candidateForm.value;
       candidateData.resourceRequirementID = this.jobId;
       console.log('candidate form submit says: ', candidateData);
-      this.candidateService.addCandidate(candidateData).subscribe(
+      this.candidateService.addCandidate(candidateData, this.jobId).subscribe(
         (response) => {
           console.log('Candidate added successfully:', response);
           this.route.navigate(['/view-candidate', this.jobId]);
