@@ -47,4 +47,8 @@ export class ViewCandidateComponent implements OnInit {
       }
     );
   }
+
+  viewInterviewDetails(candidateId: number) {
+    this.route.navigate(['/interviews-feedback', candidateId]);
+  }
 }

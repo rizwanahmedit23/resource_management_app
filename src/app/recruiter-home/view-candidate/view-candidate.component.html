@@ -24,7 +24,7 @@
         <td>{{ candidate.experience }}</td>
         <td>{{ candidate.company }}</td>
         <td>{{ candidate.designation }}</td>
-        <td><button id="openBtn" class="openBtn">Open</button></td>
+        <td><button id="openBtn" class="openBtn" (click)="viewInterviewDetails(candidate.id)">Open</button></td>
         <!-- <td>{{ candidate.resume }}</td> -->
       </tr>
     </tbody>

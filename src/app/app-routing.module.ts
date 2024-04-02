@@ -16,6 +16,7 @@ import { CandidateFormComponent } from './recruiter-home/candidate-form/candidat
 import { JobOpeningDetailComponent } from './recruiter-home/job-opening-detail/job-opening-detail.component';
 import { ViewCandidateComponent } from './recruiter-home/view-candidate/view-candidate.component';
 import { EditJobOpeningComponent } from './recruiter-home/edit-job-opening/edit-job-opening.component';
+import { InterviewFeedbackComponent } from './recruiter-home/interview-feedback/interview-feedback.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'candidate-form/:id', component:CandidateFormComponent},
   {path:'job-detail/:id', component:JobOpeningDetailComponent},
   {path:'view-candidate/:id', component:ViewCandidateComponent},
+  {path:'interviews-feedback/:id', component:InterviewFeedbackComponent},
 
   { path: 'register', component: RegistrationComponent },
   { path: 'hr-discussion', component: HRDiscussionComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.HR_MANAGER } },

@@ -1,0 +1,32 @@
+<div *ngIf="!level1Feedback">
+    <h2>Enter Level 1 Interview Feedback</h2>
+    <textarea [(ngModel)]="newLevel1Feedback"></textarea>
+    <button (click)="submitLevel1Feedback()">Submit</button>
+</div>
+<div *ngIf="level1Feedback">
+    <h2>Level 1 Interview Feedback</h2>
+    <p>{{ level1Feedback }}</p>
+    <button (click)="editLevel1Feedback()">Edit</button>
+</div>
+
+<div *ngIf="!level2Feedback">
+    <h2>Enter Level 2 Interview Feedback</h2>
+    <textarea [(ngModel)]="newLevel2Feedback"></textarea>
+    <button (click)="submitLevel2Feedback()">Submit</button>
+</div>
+<div *ngIf="level2Feedback">
+    <h2>Level 2 Interview Feedback</h2>
+    <p>{{ level2Feedback }}</p>
+    <button (click)="editLevel2Feedback()">Edit</button>
+</div>
+
+<div *ngIf="!hrDiscussion">
+    <h2>Enter HR Discussion Feedback</h2>
+    <textarea [(ngModel)]="newHRDiscussion"></textarea>
+    <button (click)="submitHRDiscussion()">Submit</button>
+</div>
+<div *ngIf="hrDiscussion">
+    <h2>HR Discussion</h2>
+    <p>{{ hrDiscussion }}</p>
+    <button (click)="editHRDiscussion()">Edit</button>
+</div>

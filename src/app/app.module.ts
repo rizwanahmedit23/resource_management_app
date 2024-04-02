@@ -21,6 +21,7 @@ import { CandidateFormComponent } from './recruiter-home/candidate-form/candidat
 import { JobOpeningDetailComponent } from './recruiter-home/job-opening-detail/job-opening-detail.component';
 import { ViewCandidateComponent } from './recruiter-home/view-candidate/view-candidate.component';
 import { EditJobOpeningComponent } from './recruiter-home/edit-job-opening/edit-job-opening.component';
+import { InterviewFeedbackComponent } from './recruiter-home/interview-feedback/interview-feedback.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { EditJobOpeningComponent } from './recruiter-home/edit-job-opening/edit-
     CandidateFormComponent,
     JobOpeningDetailComponent,
     ViewCandidateComponent,
-    EditJobOpeningComponent
+    EditJobOpeningComponent,
+    InterviewFeedbackComponent
   ],
   imports: [
     BrowserModule,
