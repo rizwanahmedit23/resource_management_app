@@ -36,6 +36,7 @@ export class InterviewFeedbackComponent implements OnInit {
   ngOnInit(){
     this.route.params.subscribe(params => {
       this.candidateId = params['id'];
+      console.log(this.candidateId);
       this.fetchInterviewDetails();
     });
   }
@@ -44,6 +45,7 @@ export class InterviewFeedbackComponent implements OnInit {
     this.level1Service.getLevel1InterviewFeedback(this.candidateId).subscribe(
       (data: any) => {
         this.level1Feedback = data;
+        console.log(data);
       },
       (error: any) => {
         console.log(error);
@@ -52,6 +54,7 @@ export class InterviewFeedbackComponent implements OnInit {
 
     this.level2Service.getLevel2InterviewFeedback(this.candidateId).subscribe(data => {
       this.level2Feedback = data;
+      console.log(data);
     },
     error => {
       console.log(error);
@@ -60,6 +63,7 @@ export class InterviewFeedbackComponent implements OnInit {
 
     this.hrDiscussionService.getHRDiscussion(this.candidateId).subscribe(data => {
       this.hrDiscussion = data;
+      console.log(data);
     },
     error => {
       console.log(error);

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class hrDiscussionFeedbackService {
   // http://localhost:8080/api/hrDiscussion
   //https://recruitment-management-backend-production.up.railway.app/api/hrDiscussion
-  private apiUrl = 'http://localhost:8080/api/hrDiscussion'; // Replace with your API URL
+  private apiUrl = 'https://recruitment-management-backend-production.up.railway.app/api/hrDiscussion'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 

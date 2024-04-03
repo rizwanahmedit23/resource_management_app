@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'candidate-form/:id', component:CandidateFormComponent},
   {path:'job-detail/:id', component:JobOpeningDetailComponent},
   {path:'view-candidate/:id', component:ViewCandidateComponent},
-  {path:'interviews-feedback/:id', component:InterviewFeedbackComponent},
+  // {path:'interviews-feedback/:id', component:InterviewFeedbackComponent},
 
   { path: 'register', component: RegistrationComponent },
   { path: 'hr-discussion', component: HRDiscussionComponent, canActivate: [AuthGuard], data: { expectedRole: UserRole.HR_MANAGER } },
